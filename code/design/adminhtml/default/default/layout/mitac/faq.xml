@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<mitacadminfaq_adminhtml_faqs_index>
+		<reference name="content">
+			<block type="mitacfaq/adminhtml_faqs" name="faqs" />
+		</reference>
+	</mitacadminfaq_adminhtml_faqs_index>
+	<mitacadminfaq_adminhtml_faqs_edit>
+		<reference name="content">
+			<block type="mitacfaq/adminhtml_faqs_edit" name="faqs.edit" />
+		</reference>
+		<reference name="left">
+			<block type="mitacfaq/adminhtml_faqs_edit_tabs" name="faqs.edit.tabs"
+			/>
+		</reference>
+	</mitacadminfaq_adminhtml_faqs_edit>
+	<mitacadminfaq_adminhtml_category_index>
+		<reference name="content">
+			<block type="mitacfaq/adminhtml_category" name="category" />
+		</reference>
+	</mitacadminfaq_adminhtml_category_index>
+	<mitacadminfaq_adminhtml_category_edit>
+		<reference name="content">
+			<block type="mitacfaq/adminhtml_category_edit" name="category.edit" />
+		</reference>
+		<reference name="left">
+			<block type="mitacfaq/adminhtml_category_edit_tabs"	name="category.edit.tabs" />
+		</reference>
+	</mitacadminfaq_adminhtml_category_edit>
+</layout>

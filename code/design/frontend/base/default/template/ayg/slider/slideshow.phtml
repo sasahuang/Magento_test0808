@@ -1,0 +1,37 @@
+<?php
+    $interval = Mage::helper('slider')->getSliderSpeed();
+    $slides = $this->getSlides();
+    $i = 0; $j = 0;
+?>
+
+<script async="true" src="http://scottjehl.github.io/picturefill/dist/picturefill.js"></script>
+<div class="slideshow-container">
+	<ul class="slideshow">
+		<?php foreach ($slides as $slide): ?>
+			<li>
+                <?php if ($slide->getUrl()): ?>
+                <a href="<?php echo $slide->getUrl() ?>">
+                <?php endif; ?>
+					<picture>
+                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+					<source srcset="<?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),1280) ?>" media="(min-width: 1100px)">
+					<source srcset="<?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),1024) ?>" media="(min-width: 770px)">
+					<source srcset="<?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),720) ?>, 
+                    <?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),1024)  ?> 1.5x,
+                    <?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),1280) ?> 2x" media="(min-width: 480px)">
+					<source srcset="<?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),480) ?>
+                    <?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),720) ?> 1.5x,
+                    <?php echo Mage::helper('slider')->getResizeImageUrl($slide->getImgSrc(),1024)  ?> 2x," media="(max-width: 479px)">
+                    <!--[if IE 9]></video><![endif]-->
+                    <img src="<?php echo Mage::helper('slider')->getImageUrl($slide->getImgSrc()) ?>" alt="<?php echo $slide->getImgAlt() ?>" title="<?php echo $slide->getTitle() ?>" />
+					</picture>
+                <?php if ($slide->getUrl()): ?>
+                </a>
+                <?php endif; ?>
+            </li>
+        <?php endforeach; ?>
+        </ul>
+	<div class="slideshow-pager">&nbsp;</div>
+	<span class="slideshow-prev">&nbsp;</span>
+	<span class="slideshow-next">&nbsp;</span>
+</div>

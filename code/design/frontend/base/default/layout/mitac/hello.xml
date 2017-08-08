@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+   <mhello_index_index>
+        <reference name="content">
+            <block type="mitachello/hello" name="hello" template="mitac/hello/hello.phtml" />
+        </reference>
+   </mhello_index_index>
+   
+    <mhello_mitac_index>
+        <reference name="content">
+            <block type="mitachello/hello" name="hello" template="mitac/hello/hello.phtml" />
+        </reference>
+   </mhello_mitac_index>
+   <mhello_message_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="mitachello/message" name="mitachello.message" template="mitac/hello/message.phtml"/>
+		</reference>
+   </mhello_message_index>
+</layout>

@@ -1,0 +1,23 @@
+<?php
+	$faqs = $this->getFaqs();
+?>
+
+<?php
+	foreach($faqs as $faq):
+?>
+	<div style="margin:20px;float:left;width:100%;">
+	<h1><?php echo $faq['name']; ?></h1>
+<?php
+	foreach($faq['data'] as $data):
+?>
+	<div style="margin:20px;float:left;width:100%;">
+		<div><?php echo $data['title']; ?></div>
+		<div><?php echo $data['content']; ?></div>
+	</div>
+<?php
+	endforeach;
+?>
+</div>
+<?php
+endforeach;
+?>

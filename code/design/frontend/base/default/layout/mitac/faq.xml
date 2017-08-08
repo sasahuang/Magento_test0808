@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+   <mitacfaq_faqs_index>
+		<reference name="root">
+			<action method="setTemplate"><template>page/1column.phtml</template></action>
+		</reference>
+		<reference name="content">
+			<block type="mitacfaq/faqs" name="mitac.faqs" template="mitac/faq/faqs.phtml"/>
+		</reference>
+	</mitacfaq_faqs_index>
+</layout>
