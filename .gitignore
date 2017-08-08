@@ -11,3 +11,4 @@ downloader
 .DS_Store
 *.swp
 log/*.log
+aaa.txt
