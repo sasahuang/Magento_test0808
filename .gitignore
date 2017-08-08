@@ -1,0 +1,13 @@
+.htaccess.sample
+app/etc/local.xml.additional
+app/etc/local.xml.template
+app/etc/local.xml
+app/.htaccess
+media/
+var/
+.htaccess
+downloader
+.sass-cache
+.DS_Store
+*.swp
+log/*.log
