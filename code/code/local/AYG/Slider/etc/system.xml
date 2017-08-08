@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <ayg translate="label" module="slider">
+            <label>AYG</label>
+            <sort_order>500</sort_order>
+        </ayg>
+    </tabs>
+    <sections>
+        <slider translate="label" module="slider">
+            <label>Slider</label>
+            <tab>ayg</tab>
+            <sort_order>10</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="slider">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <speed translate="label comment">
+                            <label>Speed</label>
+                            <comment>Seconds.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-number validate-zero-or-greater</validate>
+                        </speed>
+                    </fields>
+                </general>
+            </groups>
+        </slider>
+    </sections>
+</config>
